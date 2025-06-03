@@ -28,13 +28,16 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      display: flex;
       font-size: 3em;
       font-weight: 500;
       z-index: 10;
     }
     .half {
-      padding: 0 0.2em;
+      opacity: 0;
+      transition: opacity 2s ease;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .black-text {
       color: black;
@@ -48,8 +51,8 @@
 <body>
   <canvas id="sunCanvas"></canvas>
   <div class="center-text">
-    <span class="half black-text">i am</span>
-    <span class="half white-text">sol</span>
+    <span id="text-i-am" class="half black-text">i am</span>
+    <span id="text-sol" class="half white-text">sol</span>
   </div>
 
   <script>
@@ -107,6 +110,22 @@
     }
 
     draw();
+
+    // Text transition logic
+    const iAmText = document.getElementById('text-i-am');
+    const solText = document.getElementById('text-sol');
+
+    setTimeout(() => {
+      iAmText.style.opacity = 1;
+    }, 500);
+
+    setTimeout(() => {
+      iAmText.style.opacity = 0;
+    }, 3000);
+
+    setTimeout(() => {
+      solText.style.opacity = 1;
+    }, 5500);
   </script>
 </body>
 </html>
