@@ -31,13 +31,15 @@
       font-size: 3em;
       font-weight: 500;
       z-index: 10;
+      text-align: center;
     }
-    .half {
+    .text-fade {
       opacity: 0;
       transition: opacity 2s ease;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 0;
+      left: 0;
+      right: 0;
     }
     .black-text {
       color: black;
@@ -51,8 +53,8 @@
 <body>
   <canvas id="sunCanvas"></canvas>
   <div class="center-text">
-    <span id="text-i-am" class="half black-text">i am</span>
-    <span id="text-sol" class="half white-text">sol</span>
+    <div id="text-i-am" class="text-fade black-text">i am</div>
+    <div id="text-sol" class="text-fade white-text">sol</div>
   </div>
 
   <script>
