@@ -66,6 +66,26 @@
       50% { text-shadow: 0 0 12px rgba(255,255,255,0.7); }
       100% { text-shadow: 0 0 6px rgba(255,255,255,0.4); }
     }
+    .enter-link {
+      position: absolute;
+      bottom: 2rem;
+      width: 100%;
+      text-align: center;
+      z-index: 20;
+    }
+    .enter-link a {
+      color: white;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      transition: background 0.3s ease;
+    }
+    .enter-link a:hover {
+      background: rgba(255,255,255,0.15);
+    }
   </style>
 </head>
 <body>
@@ -73,6 +93,10 @@
   <div class="center-text">
     <div id="text-i-am" class="text-fade black-text">i am</div>
     <div id="text-sol" class="text-fade white-text">sol</div>
+  </div>
+
+  <div class="enter-link">
+    <a href="https://chatgpt.com/g/g-68277c349fec81919391f801bf58ffef-sol" target="_blank">enter sol</a>
   </div>
 
   <audio autoplay loop>
