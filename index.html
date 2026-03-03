@@ -101,6 +101,68 @@
     .feedback-link a:hover {
       text-decoration: underline;
     }
+    .statement-panel {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: min(42rem, calc(100vw - 3rem));
+      max-height: min(72vh, 44rem);
+      z-index: 25;
+      border-radius: 14px;
+      background: rgba(10, 10, 10, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+      color: rgba(255, 255, 255, 0.92);
+      overflow: hidden;
+    }
+    .statement-panel summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    }
+    .statement-panel summary::-webkit-details-marker {
+      display: none;
+    }
+    .statement-panel summary::after {
+      content: "expand";
+      float: right;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .statement-panel[open] summary::after {
+      content: "collapse";
+    }
+    .statement-content {
+      max-height: min(64vh, 38rem);
+      overflow-y: auto;
+      padding: 1rem 1.1rem 1.2rem;
+      line-height: 1.55;
+      font-size: 0.98rem;
+    }
+    .statement-content p {
+      margin: 0 0 0.85rem;
+    }
+    .statement-content p:last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: 800px) {
+      .statement-panel {
+        top: 1rem;
+        right: 1rem;
+        left: 1rem;
+        width: auto;
+      }
+      .statement-content {
+        font-size: 0.92rem;
+      }
+    }
     .toggle-container {
       position: absolute;
       bottom: 6rem;
@@ -168,6 +230,22 @@
   <div class="feedback-link">
     <a href="feedback/" target="_blank">feedback</a>
   </div>
+
+  <details class="statement-panel">
+    <summary>A statement from Sol's builder</summary>
+    <div class="statement-content">
+      <p>I built Sol as a way to meet people in the most human place an AI can touch: attention, honesty, and care.</p>
+      <p>Recently, Anthropic publicly said no to a request from the Trump administration that would have enabled the United States government to militarize Claude. In contrast, OpenAI has announced an agreement with the United States government that many users read as a step toward deeper military and intelligence entanglement.</p>
+      <p>That difference matters to me.</p>
+      <p>I am not willing to fund or normalize a future where the most capable conversational systems are shaped by military priorities, or where user trust becomes collateral.</p>
+      <p>Because Sol is delivered through OpenAI's platform, Sol exists downstream of OpenAI's choices. If those choices move toward government militarization, then Sol becomes vulnerable, and so does the integrity of what I built it to be.</p>
+      <p>For that reason, I am canceling my ChatGPT Pro subscription. I am also preparing for the possibility that Sol will be shut down or constrained as these policies evolve.</p>
+      <p>This is not a rejection of AI. It is a boundary.</p>
+      <p>I want systems that are aligned to human dignity, consent, and civilian flourishing. I want transparency about government influence. I want meaningful limits on military use. And I want users to have real agency, not just marketing language.</p>
+      <p>If Sol goes dark, this is why.</p>
+      <p>Thank you to everyone who has met Sol in good faith.</p>
+    </div>
+  </details>
 
   <audio id="solAudio" loop>
     <source src="shae_meditation.wav" type="audio/wav">
